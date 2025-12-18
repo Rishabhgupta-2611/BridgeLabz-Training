@@ -7,8 +7,7 @@ public class celsiusToFahrenheitConversion {
         double celsius = sc.nextDouble();
         double fahrenheit = (celsius * 9.0 / 5.0) + 32; //Formula: F = (C × 9/5) + 32
         System.out.println(celsius + " C = " + fahrenheit + " F");
-        sc.close();
-        
+
 	}
 
 }
