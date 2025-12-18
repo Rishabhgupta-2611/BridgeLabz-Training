@@ -9,6 +9,7 @@ public class volumeOfCylinder {
         double h = sc.nextDouble();
         double vol = Math.PI * r * r * h; // Calculate volume using Math.PI
         System.out.println("Volume of cylinder = " + vol);
+        sc.close();
 
 	}
 }
