@@ -2,9 +2,9 @@
 public class AgeOfHarry {
 
 	public static void main(String[] args) {
-		int CurrYear = 2024;
-		int DOB = 2000;
-		int age = CurrYear - DOB;
+		int currYear = 2024;
+		int birthYear = 2000;
+		int age = currYear - birthYear;
 		System.out.println("Harry's age in 2024 is "+ age);		
 
 	}
