@@ -1,50 +1,78 @@
 
 public class MatrixManipulationOperations {
 
-	static int[][] randomMatrix(int size) {
-		int[][] matrix = new int[size][size];
-		for (int i = 0; i < size; i++) {
-			for (int j = 0; j < size; j++) {
-				matrix[i][j] = (int) Math.random() * 100;
-			}
-		}
+	public static double[][] createRandomMatrix(int rows, int cols) {
+		double[][] matrix = new double[rows][cols];
+
+		for (int i = 0; i < rows; i++)
+			for (int j = 0; j < cols; j++)
+				matrix[i][j] = (int) (Math.random() * 10);
+
 		return matrix;
 	}
 
-	static int[][] transpose(int[][] matrix, int size) {
-		for (int i = 0; i < size; i++) {
-			for (int j = 0; j < size; j++) {
-				matrix[i][j] = matrix[j][i];
-			}
+	public static double[][] transpose(double[][] matrix) {
+		double[][] result = new double[matrix[0].length][matrix.length];
+
+		for (int i = 0; i < matrix.length; i++)
+			for (int j = 0; j < matrix[0].length; j++)
+				result[j][i] = matrix[i][j];
+
+		return result;
+	}
+
+	public static double determinant2x2(double[][] m) {
+		return (m[0][0] * m[1][1]) - (m[0][1] * m[1][0]);
+	}
+
+	public static double determinant3x3(double[][] m) {
+		return m[0][0] * (m[1][1] * m[2][2] - m[1][2] * m[2][1]) - m[0][1] * (m[1][0] * m[2][2] - m[1][2] * m[2][0])
+				+ m[0][2] * (m[1][0] * m[2][1] - m[1][1] * m[2][0]);
+	}
+
+	public static double[][] inverse2x2(double[][] m) {
+		double det = determinant2x2(m);
+
+		double[][] inv = new double[2][2];
+		inv[0][0] = m[1][1] / det;
+		inv[0][1] = -m[0][1] / det;
+		inv[1][0] = -m[1][0] / det;
+		inv[1][1] = m[0][0] / det;
+
+		return inv;
+	}
+
+	public static void displayMatrix(double[][] matrix) {
+		for (double[] row : matrix) {
+			for (double value : row)
+				System.out.printf("%.2f ", value);
+			System.out.println();
 		}
-		return matrix;
-	}
-
-	static int determinant(int[][] matrix,int 2) {
-		return (matrix[0][0]*matrix[1][1])-(matrix[0][1]*matrix[1][0]);
-
-	}
-
-	static int determinant3x3(int[][] matrix,int 3) {
-		int a = matrix[0][0];
-	    int b = matrix[0][1];
-	    int c = matrix[0][2];
-
-	    int d = matrix[1][0];
-	    int e = matrix[1][1];
-	    int f = matrix[1][2];
-
-	    int g = matrix[2][0];
-	    int h = matrix[2][1];
-	    int i = matrix[2][2];
-
-	    return a * (e * i - f * h)
-	         - b * (d * i - f * g)
-	         + c * (d * h - e * g);
+		System.out.println();
 	}
 
 	public static void main(String[] args) {
 
-	}
+		double[][] matrix2x2 = createRandomMatrix(2, 2);
 
+		System.out.println("2x2 Matrix:");
+		displayMatrix(matrix2x2);
+
+		System.out.println("Transpose:");
+		displayMatrix(transpose(matrix2x2));
+
+		double det2 = determinant2x2(matrix2x2);
+		System.out.println("Determinant: " + det2);
+
+		if (det2 != 0) {
+			System.out.println("Inverse:");
+			displayMatrix(inverse2x2(matrix2x2));
+		}
+
+		double[][] matrix3x3 = createRandomMatrix(3, 3);
+		System.out.println("\n3x3 Matrix:");
+		displayMatrix(matrix3x3);
+
+		System.out.println("Determinant (3x3): " + determinant3x3(matrix3x3));
+	}
 }
