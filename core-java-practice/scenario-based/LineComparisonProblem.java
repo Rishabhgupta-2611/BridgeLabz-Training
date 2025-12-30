@@ -15,7 +15,7 @@ public class LineComparisonProblem {
 		}
 	}
 
-	public int compare_lines_accordind_to_end_points(int x1, int y1, int x2, int y2, int a1, int b1, int a2, int b2) {
+	public int compareLinesAccordingToEndPoints(int x1, int y1, int x2, int y2, int a1, int b1, int a2, int b2) {
 		if (x1 == a1 && y1 == b1 && x2 == a2 && y2 == b2) {
 			return 0; // Lines are equal
 		} else if (x1 > a1 || y1 > b1 || x2 > a2 || y2 > b2) {
@@ -57,8 +57,7 @@ public class LineComparisonProblem {
 			System.out.println("Second line is longer than the first line.");
 		}
 		// Uc3
-		int endpointComparisonResult = lineComparison.compare_lines_accordind_to_end_points(x1, y1, x2, y2, a1, b1, a2,
-				b2);
+		int endpointComparisonResult = lineComparison.compareLinesAccordingToEndPoints(x1, y1, x2, y2, a1, b1, a2, b2);
 		if (endpointComparisonResult == 0) {
 			System.out.println("Both lines are equal based on their end points.");
 		} else if (endpointComparisonResult == 1) {
