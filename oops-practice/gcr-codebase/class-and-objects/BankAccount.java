@@ -22,13 +22,13 @@ public class BankAccount {
 	}
 
 	public static void main(String[] args) {
-		BankAccount acc = new BankAccount();
+		BankAccount account = new BankAccount();
 
-		acc.displayBalance();
-		acc.deposit(200);
-		acc.displayBalance();
-		acc.withdraw(100);
-		acc.displayBalance();
-		acc.withdraw(900);
+		account.displayBalance();
+		account.deposit(200);
+		account.displayBalance();
+		account.withdraw(100);
+		account.displayBalance();
+		account.withdraw(900);
 	}
 }
