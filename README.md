@@ -1,74 +1,150 @@
-# BridgeLabz – Core Java Training Log
+## BridgeLabz Training
 
-This repository contains my daily practice work and lab assignments for the **Capgemini – BridgeLabz Core Java Training Program** (4 months), which started on **16 December 2025** (Tuesday). The focus is on Core Java fundamentals, clean coding, and problem‑solving through small, well‑structured console programs.
+This repository serves as a comprehensive record of all **assignments, practice programs, scenario-based problems, and problem-solving exercises** completed during the **BridgeLabz Training Program**.
+
+All work is systematically organized **week-wise, day-wise, and topic-wise**, following **standard GitHub workflows and coding best practices** to ensure clarity, consistency, and professional documentation.
+
+
+## Repository Structure :-
+     
+     BridgeLabz-Training/
+     │
+     ├── core-java-practice/     
+     │   │
+     │   ├── gcr-codebase/
+     │   │   ├── programming-elements/
+     │   │   └── control-flow/
+     │   │
+     │   ├── leet-code-codebase/
+     │   │
+     │   └── scenario-based/
+     │
+     ├── oops-practice/  
+     │   │
+     │   ├── gcr-codebase/
+     │   │   ├── class-and-object/
+     │   │   ├── java-constructors/
+     |   |   ├── java-keywords/
+     |   |   ├── object-modeling/
+     |   |   ├── inheritance/
+     |   |
+     │   └── scenario-based/
+     |
+     ├── reviews/   
+     |
+     +-- README.md
+
+
+
+
+## Weekly Workflow & Progress :-
+
+## 🗓️ Week 1: Java Basics, Control Flow & Arrays  
+**(16 Dec 2025 – 20 Dec 2025)**
+
+### **16-Dec-2025 (Tuesday)**
+- Introduction to BridgeLabz training & guidelines  
+- Installed JDK and Eclipse IDE  
+
+### **17-Dec-2025 (Wednesday)**
+- Installed and configured Git & GitHub  
+- Solved basic Java problems  
+- Pushed code to GitHub  
+
+### **18-Dec-2025 (Thursday)**
+- Studied Java Programming Elements  
+- Practiced variables, data types, operators, and I/O  
+
+### **19-Dec-2025 (Friday)**
+- Studied Control Flow (if-else, loops, switch)  
+- Solved Control Flow practice problems  
+
+### **20-Dec-2025 (Saturday)**
+- Studied Java Arrays  
+- Solved 1D and 2D array problems  
+- Completed scenario-based questions  
 
 ---
 
-## Week 1: Setup, Basics & Control Flow (16/12/2025 – 20/12/2025)
+## 🗓️ Week 2: Strings & Methods  
+**(22 Dec 2025 – 26 Dec 2025)**
 
-### Tuesday – 16 Dec 2025: Environment & Tools
+### **22-Dec-2025 (Monday)**
+- Studied Java Strings  
+- Solved Level 1 & Level 2 string problems  
 
-- Installed and verified **JDK** for Core Java development.  
-- Configured **Git**, **GitHub**, and **Git Bash** for version control.  
-- Created the `BridgeLabz-Training` repository and organized the `core-java-practice` branch.  
-- Practiced basic Git workflow: `git init`, `git status`, `git add`, `git commit`, `git push` for daily submissions.
+### **23-Dec-2025 (Tuesday)**
+- Solved Level 3 string problems  
+- Scenario: Election Booth Manager  
 
-### Wednesday – 17 Dec 2025: Java Programming Elements – Level 1
+### **24-Dec-2025 (Wednesday)**
+- Practiced String Methods  
+- Scenario: Metro Smart Card Fare Deduction  
 
-- Revised Java basics: comments, data types (`int`, `double`, `char`, `String`), variables, and arithmetic operators.  
-- Followed best practices for variable naming (camelCase), class naming, and indentation.  
-- Implemented Level 1 problems: age calculation, unit conversions, profit/discount calculation, and basic numeric programs using well‑named variables (no magic numbers).
-
-### Thursday – 18 Dec 2025: Programming Elements – Level 2
-
-- Used the `Scanner` class to build user‑input‑driven programs (`nextInt`, `nextDouble`).  
-- Implemented Level 2 programs: calculator (add/subtract/multiply/divide), area and distance calculations, handshake count using the \(n(n - 1)/2\) formula, and other numeric utilities.  
-- Focused on avoiding hardcoding, correct operator precedence, and clear, single‑responsibility classes.
-
-### Friday – 19 Dec 2025: Control Flow – Level 1
-
-- Practiced decision making using `if/else` and loops (`while`, `for`).  
-- Implemented control‑flow programs: divisibility checks, voting eligibility, positive/negative/zero classification, natural number validation, and Spring season check.  
-- Wrote loop‑based programs: countdown (while/for), sum of digits, sum of `n` natural numbers (formula + loop), and factorial (while → for).
-
-### Saturday – 20 Dec 2025: Control Flow – Level 2 (Intro)
-
-- Applied loops and conditions to more logic‑oriented problems.  
-- Implemented programs to:  
-  - Print odd and even numbers from 1 to a user‑entered natural number.  
-  - Calculate a 5% employee bonus when years of service > 5 (salary and years as input).  
-  - Print a multiplication table of a given number from 6 to 9 in the format `number * i = result`.  
-- Prepared for upcoming Level 2 topics: FizzBuzz, factor and greatest factor, and power calculation using both `for` and `while` loops.
+### **26-Dec-2025 (Friday)**
+- Solved advanced string method problems  
+- Completed extra built-in function exercises  
 
 ---
 
-## Repository Layout
+## 🗓️ Week 3: Object-Oriented Programming  
+**(29 Dec 2025 – 03 Jan 2026)**
 
-BridgeLabz-Training  
-│  
-├── core-java-practice  
-│   ├── gcr-codebase  
-│   │   ├── programming-elements   – Java basics, numeric problems, user-input programs  
-│   │   ├── control-flow           – If/else, loops, Level 1–3 control-flow labs  
-│   │   └── arrays                 – Upcoming array-based exercises  
-│   │  
-│   ├── scenario-based             – Small real-world and combined-logic scenarios  
-│   └── leet-code-codebase         – Algorithmic and problem-solving practice  
+### **29-Dec-2025 (Monday)**
+- Completed built-in method practice  
+- Scenario: Employee Wage Computation  
 
-This structure separates core lab work, scenario problems, and external problem‑solving, making the repository easy to review from a training and evaluation perspective.
+### **30-Dec-2025 (Tuesday)**
+- Solved Line Comparison Problem  
+- Solved Snake and Ladder Problem  
+
+### **31-Dec-2025 (Wednesday)**
+- Completed Class and Object assignment  
+- Completed Constructors & Access Modifiers assignment  
+
+### **01-Jan-2026 (Thursday)**
+- Completed Java Keywords assignment  
+- Scenario: Sentence Formatter  
+- Scenario: Paragraph Analyzer  
+
+### **02-Jan-2026 (Friday)**
+- Studied Object Modeling & Class Diagrams  
+- Scenario: Temperature Analyzer  
+- Scenario: Student Score Analyzer  
+
+### **03-Jan-2026 (Saturday)**
+- Completed Inheritance assignment  
+- Scenario: Library Management System  
+- Scenario: EduQuiz – Student Quiz Grader  
 
 ---
 
-## Tech Stack & Coding Standards
+## 🗓️ Week 4: Encapsulation, Polymorphism & Interfaces  
+**(05 Jan 2026 – Ongoing)**
 
-- **Language:** Java (Core Java, console applications).  
-- **Version Control:** Git with GitHub remote, using frequent, descriptive commits.  
-- **Tools:** JDK, Git Bash, IDE (Eclipse/IntelliJ).  
-- **Practices:**  
-  - All values stored in variables (fixed, input, results) – no hardcoded literals.  
-  - Clear, purpose‑driven class names (e.g., `SumNaturalNumbers`, `EmployeeBonus`, `MultiplicationTable`).  
-  - Consistent indentation and comments for key logical blocks (declarations, conditionals, loops).  
+### **05-Jan-2026 (Monday)**
+- Studied Encapsulation, Interface, Abstract Class & Polymorphism  
+- Scenario-based and LeetCode problems:
+  - Student Score Analyzer  
+  - Invoice Generator  
+  - Cafeteria Menu App  
 
+---
+## 🛠️ Tech Stack & Coding Standards
+
+### 💻 Technology Stack
+- **Programming Language:** Java  
+- **Version Control:** Git with GitHub for source code management  
+- **Development Tools:** JDK, Git Bash, and standard IDEs (Eclipse / IntelliJ IDEA)
+
+### 📌 Coding Standards & Development Practices
+- All values, including inputs, constants, and computed results, are stored in **well-defined variables**, avoiding unnecessary hardcoding.
+- Code follows **clear and meaningful naming conventions** for classes, methods, and variables to improve readability and intent.
+- **Consistent indentation, formatting, and structure** are maintained throughout the codebase.
+- Logical sections of the code are **properly commented** to enhance understanding and maintainability.
+- Emphasis is placed on **clean, modular, and readable code**.
+- **Frequent, descriptive Git commits** are used to maintain a clear and traceable development history.
+- Standard GitHub workflows are followed to ensure organized collaboration and version control.
 ---
 
 ## Author
