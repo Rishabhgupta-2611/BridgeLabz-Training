@@ -1,0 +1,4 @@
+Hello Java!
+This is a sample text file.
+Checked Exceptions are handled at compile time.
+FileInputStream is used to read this file.
