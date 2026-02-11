@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AddressBookMain.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Address Book Application</a> &gt; <a href="index.source.html" class="el_package">com.addressbook.main</a> &gt; <span class="el_source">AddressBookMain.java</span></div><h1>AddressBookMain.java</h1><pre class="source lang-java linenums">package com.addressbook.main;
+import com.addressbook.service.ContactService;
+import com.addressbook.dao.ContactDAO;
+import com.addressbook.model.ContactPerson;
+import java.util.*;
+
+
+<span class="nc" id="L8">public class AddressBookMain {</span>
+
+	private static ContactPerson readContact(Scanner input) {
+<span class="nc" id="L11">		System.out.print(&quot;First Name: &quot;);</span>
+<span class="nc" id="L12">		String firstName = input.nextLine();</span>
+
+<span class="nc" id="L14">		System.out.print(&quot;Last Name: &quot;);</span>
+<span class="nc" id="L15">		String lastName = input.nextLine();</span>
+
+<span class="nc" id="L17">		System.out.print(&quot;Address: &quot;);</span>
+<span class="nc" id="L18">		String address = input.nextLine();</span>
+
+<span class="nc" id="L20">		System.out.print(&quot;City: &quot;);</span>
+<span class="nc" id="L21">		String city = input.nextLine();</span>
+
+<span class="nc" id="L23">		System.out.print(&quot;State: &quot;);</span>
+<span class="nc" id="L24">		String state = input.nextLine();</span>
+
+<span class="nc" id="L26">		System.out.print(&quot;Zip: &quot;);</span>
+<span class="nc" id="L27">		String zip = input.nextLine();</span>
+
+<span class="nc" id="L29">		System.out.print(&quot;Phone: &quot;);</span>
+<span class="nc" id="L30">		String phone = input.nextLine();</span>
+
+<span class="nc" id="L32">		System.out.print(&quot;Email: &quot;);</span>
+<span class="nc" id="L33">		String email = input.nextLine();</span>
+
+<span class="nc" id="L35">		return new ContactPerson(firstName, lastName, address, city, state, zip, phone, email);</span>
+	}
+	
+	public static void main(String[] args) {
+<span class="nc" id="L39">		System.out.println(&quot;Welcome to Address Book Program&quot;);</span>
+
+<span class="nc" id="L41">		Scanner input = new Scanner(System.in);</span>
+<span class="nc" id="L42">		ContactDAO contactDAO = new ContactDAO();</span>
+<span class="nc" id="L43">		ContactService contactService = new ContactService(contactDAO);</span>
+
+<span class="nc" id="L45">		boolean running = true;</span>
+
+<span class="nc bnc" id="L47" title="All 2 branches missed.">		while (running) {</span>
+<span class="nc" id="L48">			System.out.println(&quot;\n1. Add Contact&quot;);</span>
+<span class="nc" id="L49">			System.out.println(&quot;2. View All Contacts&quot;);</span>
+<span class="nc" id="L50">			System.out.println(&quot;3. Edit Contact&quot;);</span>
+<span class="nc" id="L51">			System.out.println(&quot;4. Delete Contact&quot;);</span>
+<span class="nc" id="L52">			System.out.println(&quot;5. Exit&quot;);</span>
+<span class="nc" id="L53">			System.out.print(&quot;Enter choice: &quot;);</span>
+
+<span class="nc" id="L55">			int choice = Integer.parseInt(input.nextLine());</span>
+
+<span class="nc bnc" id="L57" title="All 6 branches missed.">			switch (choice) {</span>
+			case 1:
+<span class="nc" id="L59">				ContactPerson newContact = readContact(input);</span>
+<span class="nc" id="L60">				String addMsg = contactService.addContact(newContact);</span>
+<span class="nc" id="L61">				System.out.println(addMsg);</span>
+<span class="nc" id="L62">				break;</span>
+
+			case 2:
+<span class="nc" id="L65">				List&lt;ContactPerson&gt; contacts = contactService.getAllContacts();</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">				if (contacts.isEmpty()) {</span>
+<span class="nc" id="L67">					System.out.println(&quot;\nNo contacts found.\n&quot;);</span>
+				} else {
+<span class="nc" id="L69">					System.out.println(&quot;\nDisplaying All Contacts:&quot;);</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">					for (ContactPerson c : contacts) {</span>
+						//System.out.println(c);
+<span class="nc" id="L72">						c.displayDetails();</span>
+<span class="nc" id="L73">					}</span>
+				}
+<span class="nc" id="L75">				break;</span>
+
+			case 3:
+<span class="nc" id="L78">				System.out.print(&quot;Enter first name of contact to edit: &quot;);</span>
+<span class="nc" id="L79">				String ef = input.nextLine();</span>
+<span class="nc" id="L80">				System.out.print(&quot;Enter last name of contact to edit: &quot;);</span>
+<span class="nc" id="L81">				String el = input.nextLine();</span>
+<span class="nc" id="L82">				ContactPerson existing = contactService.getContactByName(ef, el);</span>
+<span class="nc bnc" id="L83" title="All 2 branches missed.">				if (existing == null) {</span>
+<span class="nc" id="L84">					System.out.println(&quot;Contact not found.&quot;);</span>
+				} else {
+<span class="nc" id="L86">					System.out.println(&quot;Enter new details:&quot;);</span>
+<span class="nc" id="L87">					ContactPerson updated = readContact(input);</span>
+<span class="nc" id="L88">					String updateMsg = contactService.updateContact(ef, el, updated);</span>
+<span class="nc" id="L89">					System.out.println(updateMsg);</span>
+				}
+<span class="nc" id="L91">				break;</span>
+
+			case 4:
+<span class="nc" id="L94">				System.out.print(&quot;Enter first name of contact to delete: &quot;);</span>
+<span class="nc" id="L95">				String df = input.nextLine();</span>
+<span class="nc" id="L96">				System.out.print(&quot;Enter last name of contact to delete: &quot;);</span>
+<span class="nc" id="L97">				String dl = input.nextLine();</span>
+<span class="nc" id="L98">				String delMsg = contactService.deleteContact(df, dl);</span>
+<span class="nc" id="L99">				System.out.println(delMsg);</span>
+<span class="nc" id="L100">				break;</span>
+
+			case 5:
+<span class="nc" id="L103">				running = false;</span>
+<span class="nc" id="L104">				System.out.println(&quot;Exiting Address Book. Bye!&quot;);</span>
+<span class="nc" id="L105">				break;</span>
+
+			default:
+<span class="nc" id="L108">				System.out.println(&quot;Invalid choice.&quot;);</span>
+			}
+<span class="nc" id="L110">		}</span>
+
+<span class="nc" id="L112">		input.close();</span>
+<span class="nc" id="L113">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
