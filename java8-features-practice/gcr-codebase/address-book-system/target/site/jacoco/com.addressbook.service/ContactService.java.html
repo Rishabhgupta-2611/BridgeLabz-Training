@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ContactService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Address Book Application</a> &gt; <a href="index.source.html" class="el_package">com.addressbook.service</a> &gt; <span class="el_source">ContactService.java</span></div><h1>ContactService.java</h1><pre class="source lang-java linenums">package com.addressbook.service;
+import com.addressbook.dao.ContactDAO;
+import com.addressbook.model.ContactPerson;
+import java.util.*;
+
+public class ContactService {
+
+	private final ContactDAO contactDAO;
+
+<span class="fc" id="L10">	public ContactService(ContactDAO contactDAO) {</span>
+<span class="fc" id="L11">		this.contactDAO = contactDAO;</span>
+<span class="fc" id="L12">	}</span>
+
+	// (UC : 1)
+	public String addContact(ContactPerson contact) {
+<span class="pc bpc" id="L16" title="2 of 4 branches missed.">		if (contact.getFirstName() == null || contact.getLastName() == null) {</span>
+<span class="nc" id="L17">			return &quot;First name and last name are required.&quot;;</span>
+		}
+
+<span class="fc" id="L20">		ContactPerson existing = contactDAO.findByName(contact.getFirstName(), contact.getLastName());</span>
+
+<span class="fc bfc" id="L22" title="All 2 branches covered.">		if (existing != null) {</span>
+<span class="fc" id="L23">			return &quot;Contact already exists with this name.&quot;;</span>
+		}
+
+<span class="fc" id="L26">		contactDAO.addContact(contact);</span>
+<span class="fc" id="L27">		return &quot;Contact added successfully.&quot;;</span>
+	}
+
+	public List&lt;ContactPerson&gt; getAllContacts() {
+<span class="fc" id="L31">		return contactDAO.getAllContacts();</span>
+	}
+
+	public ContactPerson getContactByName(String firstName, String lastName) {
+<span class="fc" id="L35">		return contactDAO.findByName(firstName, lastName);</span>
+	}
+
+	public String deleteContact(String firstName, String lastName) {
+<span class="fc" id="L39">		boolean removed = contactDAO.deleteByName(firstName, lastName);</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">		return removed ? &quot;Contact deleted.&quot; : &quot;Contact not found.&quot;;</span>
+	}
+
+	public String updateContact(String firstName, String lastName, ContactPerson updated) {
+<span class="fc" id="L44">		ContactPerson existing = contactDAO.findByName(firstName, lastName);</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">		if (existing == null) {</span>
+<span class="fc" id="L46">			return &quot;Contact not found.&quot;;</span>
+		}
+
+		// updating all the fileds
+<span class="fc" id="L50">		existing.setAddress(updated.getAddress());</span>
+<span class="fc" id="L51">		existing.setCity(updated.getCity());</span>
+<span class="fc" id="L52">		existing.setState(updated.getState());</span>
+<span class="fc" id="L53">		existing.setZip(updated.getZip());</span>
+<span class="fc" id="L54">		existing.setPhone(updated.getPhone());</span>
+<span class="fc" id="L55">		existing.setEmail(updated.getEmail());</span>
+<span class="fc" id="L56">		existing.setFirstName(updated.getFirstName());</span>
+<span class="fc" id="L57">		existing.setLastName(updated.getLastName());</span>
+
+<span class="fc" id="L59">		return &quot;Contact updated.&quot;;</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
