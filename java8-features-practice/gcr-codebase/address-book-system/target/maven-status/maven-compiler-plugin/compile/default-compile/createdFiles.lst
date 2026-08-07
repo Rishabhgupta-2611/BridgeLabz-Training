@@ -1,4 +1,0 @@
-com\addressbook\model\ContactPerson.class
-com\addressbook\service\ContactService.class
-com\addressbook\main\AddressBookMain.class
-com\addressbook\dao\ContactDAO.class
