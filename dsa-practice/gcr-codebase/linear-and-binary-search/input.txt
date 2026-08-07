@@ -1,7 +1,0 @@
-Hello World!
-This is a sample text file.
-It is used for reading data line by line.
-Java FileReader and BufferedReader are very useful.
-Each line will be printed on the console.
-End of file.
-Rishabh
