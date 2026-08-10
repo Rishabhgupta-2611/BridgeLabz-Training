@@ -1,0 +1,48 @@
+10-Aug-2026 11:08:28.614 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.57
+10-Aug-2026 11:08:28.622 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 3 2026 13:06:05 UTC
+10-Aug-2026 11:08:28.625 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.57.0
+10-Aug-2026 11:08:28.625 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+10-Aug-2026 11:08:28.625 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+10-Aug-2026 11:08:28.625 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+10-Aug-2026 11:08:28.626 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot
+10-Aug-2026 11:08:28.626 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.10+7-LTS
+10-Aug-2026 11:08:28.626 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+10-Aug-2026 11:08:28.626 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57
+10-Aug-2026 11:08:28.626 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57
+10-Aug-2026 11:08:28.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Duser.timezone=Asia/Kolkata
+10-Aug-2026 11:08:28.661 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\conf\logging.properties
+10-Aug-2026 11:08:28.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+10-Aug-2026 11:08:28.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+10-Aug-2026 11:08:28.662 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+10-Aug-2026 11:08:28.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+10-Aug-2026 11:08:28.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+10-Aug-2026 11:08:28.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+10-Aug-2026 11:08:28.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+10-Aug-2026 11:08:28.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+10-Aug-2026 11:08:28.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+10-Aug-2026 11:08:28.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+10-Aug-2026 11:08:28.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57
+10-Aug-2026 11:08:28.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57
+10-Aug-2026 11:08:28.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\temp
+10-Aug-2026 11:08:28.686 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MongoDB\Server\7.0\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\nodejs\;C:\Program Files\Apache\Maven\apache-maven-3.9.x\bin;C:\Program Files\Apache\Maven\apache-maven-3.9.12\bin;C:\Program Files\Eclipse Adoptium\jdk-21.0.10.7-hotspot\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Cloudflare\Cloudflare WARP\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\risha\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\risha\AppData\Local\Programs\Python\Python312\;C:\Users\risha\AppData\Local\Programs\Python\Launcher\;C:\Users\risha\AppData\Local\Microsoft\WindowsApps;C:\Users\risha\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\MongoDB\Server\7.0\bin;C:\ProgramData\risha\GitHubDesktop\bin;C:\Users\risha\AppData\Roaming\npm;C:\Users\risha\AppData\Local\Programs\Antigravity\bin;C:\Users\risha\AppData\Local\Programs\Antigravity IDE\bin;.]
+10-Aug-2026 11:08:29.178 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+10-Aug-2026 11:08:29.221 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [993] milliseconds
+10-Aug-2026 11:08:29.302 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+10-Aug-2026 11:08:29.303 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.57]
+10-Aug-2026 11:08:29.325 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\docs]
+10-Aug-2026 11:08:29.988 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\docs] has finished in [662] ms
+10-Aug-2026 11:08:29.989 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\examples]
+10-Aug-2026 11:08:31.273 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\examples] has finished in [1,283] ms
+10-Aug-2026 11:08:31.275 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\host-manager]
+10-Aug-2026 11:08:31.348 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\host-manager] has finished in [73] ms
+10-Aug-2026 11:08:31.349 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\manager]
+10-Aug-2026 11:08:31.410 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\manager] has finished in [60] ms
+10-Aug-2026 11:08:31.412 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\ROOT]
+10-Aug-2026 11:08:31.455 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\BridgeLabz-Training\Refresher-Training\Day-5\apache-tomcat-10.1.57\webapps\ROOT] has finished in [43] ms
+10-Aug-2026 11:08:31.464 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+10-Aug-2026 11:08:31.519 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2294] milliseconds
+10-Aug-2026 11:09:25.191 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+10-Aug-2026 11:09:25.196 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+10-Aug-2026 11:09:25.210 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+10-Aug-2026 11:09:25.268 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+10-Aug-2026 11:09:25.293 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
