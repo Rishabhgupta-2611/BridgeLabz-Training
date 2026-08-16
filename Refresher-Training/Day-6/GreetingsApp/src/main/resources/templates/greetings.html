@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Greetings App</title>
+</head>
+
+<body>
+
+<h1>Greetings List</h1>
+
+<a href="/greetings/add">Add New Greeting</a>
+
+<br>
+<br>
+
+<table border="1">
+
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Message</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr th:each="greeting : ${greetings}">
+
+            <td th:text="${greeting.id}"></td>
+
+            <td th:text="${greeting.message}"></td>
+
+            <td>
+
+                <a th:href="@{/greetings/edit/{id}(id=${greeting.id})}">
+                    Edit
+                </a>
+
+                |
+
+                <a th:href="@{/greetings/delete/{id}(id=${greeting.id})}">
+                    Delete
+                </a>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+</body>
+
+</html>
